@@ -2,7 +2,7 @@ project(PDCurses)
 
 cmake_minimum_required(VERSION 3.0)
 
-if (MINGW)
+if (MINGW AND (DEFINED INFOEX))
     add_definitions(-DHAVE_NO_INFOEX)
 endif()
 if (WIN32 OR MSYS OR CYGWIN OR MINGW OR MSVC)
